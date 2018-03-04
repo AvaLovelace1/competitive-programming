@@ -6,3 +6,6 @@ PEG profile link: [AvaLovelace](https://wcipeg.com/user/AvaLovelace)
 
 ## solutions
 Contains solutions to problems from various online judges, mainly DMOJ and PEG. Problems are organized by origin and files take their names from the problem code.
+
+## templates
+Contains implementations and short explanations of various algorithms and data structures.
