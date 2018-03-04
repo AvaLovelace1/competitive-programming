@@ -1,6 +1,9 @@
 /*
  ~ Dynamic Programming ~
  
+ Dynamic Programming (DP) is a technique where a solution is found by combining solutions to subproblems.
+ A DP problem must have optimal substructure and overlapping subproblems.
+ 
  A collection of random DP problems.
  
  Coin Change Problem
