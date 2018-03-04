@@ -1,6 +1,6 @@
 /*
  Solution to CCC '01 S3 - Strategic Bombing by Ava Pun
- Key concepts: graph theory
+ Key concepts: graph theory, DFS
  */
  
 #include <bits/stdc++.h>
