@@ -1,6 +1,6 @@
 /*
  Solution to CCO '14 P3 - Werewolf by Ava Pun
- Key concepts: dynamic programming
+ Key concepts: dynamic programming on trees
  */
 
 #include <bits/stdc++.h>
