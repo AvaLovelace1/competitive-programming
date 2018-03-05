@@ -61,7 +61,8 @@ int krus() {
     }
     
     int ans = 0;
-    for (piii e : edges) {
+    for (int i = 0; i < M; i++) {
+        piii e = edges[i];
         int u = e.second.first;
         int v = e.second.second;
         int w = e.first;
