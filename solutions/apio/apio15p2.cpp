@@ -1,6 +1,6 @@
 /*
  Solution to APIO '15 P2 - Jakarta Skyscrapers by Ava Pun
- Key concepts: graph theory, Dijkstra's
+ Key concepts: Dijkstra's
  */
  
 #include <bits/stdc++.h>
