@@ -1,6 +1,6 @@
 /*
  Solution to DMOPC '15 Contest 6 P4 - Line Graph by Ava Pun
- Key concepts: dynamic programming
+ Key concepts: graph theory, minimum spanning tree, Kruskal's
  */
  
 #include <bits/stdc++.h>
