@@ -1,6 +1,6 @@
 /*
  Solution to Shortest Path by Ava Pun
- Key concepts: graph theory, Dijkstra's
+ Key concepts: graph theory, BFS
  */
 
 #include <bits/stdc++.h>
