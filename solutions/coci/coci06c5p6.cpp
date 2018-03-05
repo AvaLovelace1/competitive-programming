@@ -1,6 +1,6 @@
 /*
  Solution to COCI '06 Contest 5 #6 Dvaput by Ava Pun
- Key concepts: suffix arrays
+ Key concepts: suffix array
  */
  
 #include <bits/stdc++.h>
