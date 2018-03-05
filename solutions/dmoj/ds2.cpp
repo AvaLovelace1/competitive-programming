@@ -1,6 +1,6 @@
 /*
  Solution to Disjoint Set Test by Ava Pun
- Key concepts: disjoint sets, minimum spanning tree
+ Key concepts: disjoint set, minimum spanning tree
  */
 
 #include <bits/stdc++.h>
