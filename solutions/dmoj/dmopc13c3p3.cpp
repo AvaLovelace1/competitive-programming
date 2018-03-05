@@ -1,6 +1,6 @@
 /*
  Solution to DMOPC '13 Contest 3 P3 - Crossing Field by Ava Pun
- Key concepts: dynamic programming
+ Key concepts: DFS
  */
 
 #include <bits/stdc++.h>
