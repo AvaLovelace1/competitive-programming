@@ -1,6 +1,6 @@
 /*
  Solution to Longest Increasing Subsequence by Ava Pun
- Key concepts: dynamic programming
+ Key concepts: dynamic programming, longest increasing subsequence
  */
 
 #include <bits/stdc++.h>
