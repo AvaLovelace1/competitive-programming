@@ -1,6 +1,6 @@
 /*
  Solution to Mock CCC '18 Contest 5 S5 - Carol's Cute Construction by Ava Pun
- Key concepts: max flow, Dinic's
+ Key concepts: graph theory, max flow, Dinic's
  */
 
 #include <bits/stdc++.h>
