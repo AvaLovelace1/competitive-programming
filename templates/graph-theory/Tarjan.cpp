@@ -67,7 +67,7 @@ void tarj(int u, int prev) {
                 if (low[v] > dfn[u]) {
                     bridge[e] = true;
                 }
-            } else if (v != prev && dfn[v] < low[u]) {
+            } else if (v != prev) {
                 low[u] = min(low[u], dfn[v]);
             }
             
