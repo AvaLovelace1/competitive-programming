@@ -1,6 +1,6 @@
 /*
  Solution to USACO '18 January G1 - MooTube by Ava Pun
- Key concepts: disjoint set, offline queries
+ Key concepts: graph theory, disjoint set, offline queries
  */
 
 #include <bits/stdc++.h>
