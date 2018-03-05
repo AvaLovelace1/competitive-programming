@@ -23,12 +23,12 @@ const int MOD = 1e9 + 7;
 const int MAX = 1e5 + 5;
 
 int N, Q;
-int arr[MAX], tree[MAX];
+int arr[MAX], bit[MAX];
 
 void update(int pos, int add) {
     arr[pos] += add;
     for (int i = pos; i <= N; i += i & -i) {
-        tree[i] += add;
+        bit[i] += add;
     }
 }
 
@@ -41,7 +41,7 @@ void build() {
 int query(int pos) {
     int sum = 0;
     for (int i = pos; i > 0; i -= i & -i) {
-        sum += tree[i];
+        sum += bit[i];
     }
     return sum;
 }
