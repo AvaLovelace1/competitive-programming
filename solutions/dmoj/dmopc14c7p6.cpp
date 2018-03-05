@@ -1,6 +1,6 @@
 /*
  Solution to DMOPC '14 Contest 8 P6 - Revenge of the Bins by Ava Pun
- Key concepts: segment tree, lazy propagation
+ Key concepts: segment tree with lazy propagation
  */
  
 #include <bits/stdc++.h>
