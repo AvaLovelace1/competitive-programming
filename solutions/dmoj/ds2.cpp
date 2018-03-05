@@ -1,6 +1,6 @@
 /*
  Solution to Disjoint Set Test by Ava Pun
- Key concepts: disjoint set, minimum spanning tree
+ Key concepts: graph theory, disjoint set, minimum spanning tree, Kruskal's
  */
 
 #include <bits/stdc++.h>
