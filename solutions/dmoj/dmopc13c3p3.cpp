@@ -1,6 +1,6 @@
 /*
  Solution to DMOPC '13 Contest 3 P3 - Crossing Field by Ava Pun
- Key concepts: DFS
+ Key concepts: graph theory, DFS
  */
 
 #include <bits/stdc++.h>
