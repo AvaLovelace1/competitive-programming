@@ -60,7 +60,7 @@ void tarj(int u, int prev) {
                 children++;
                 tarj(v, u);
                 low[u] = min(low[u], low[v]);
-                if ((dfn[u] == 1 && children > 1) || (dfn[u] != 1 && low[v] >= dfn[u])) {
+                if ((prev == -1 && children > 1) || (prev != -1 && low[v] >= dfn[u])) {
                     art[u] = true;
                     findbcc(e);
                 }
