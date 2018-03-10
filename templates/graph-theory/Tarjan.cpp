@@ -63,8 +63,8 @@ void tarj(int u, int prev) {
                 bridges[bridgeCnt] = {u, v};
                 bridgeCnt++;
             }
-        } else if (v != prev && dfn[v] < low[u]) {
-            low[u] = dfn[v];
+        } else if (v != prev && dfn[v] < dfn[u]) {
+            low[u] = min(low[u], dfn[v]);
             st.push({u, v});
         }
     }
