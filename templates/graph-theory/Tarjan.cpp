@@ -22,19 +22,20 @@ const int MAXE = 1e6 + 5;
 
 int N, M;
 vector<int> adj[MAX];
-pii edges[MAXE];
 int dfn[MAX], low[MAX];
-bool vis[MAX], visE[MAXE];
-bool art[MAX], bridge[MAXE];
-stack<int> st;
-int cnt = 1;
+bool vis[MAX];
+bool art[MAX];
+pii bridges[MAXE];
+stack<pii> st;
+stack<int> st1;
+int cnt = 1, bridgeCnt = 0;
 
-void findbcc(int e) {
+void findbcc(int u, int v) {
     while (!st.empty()) {
-        int x = st.top();
-        printf("{%d, %d} ", edges[x].first, edges[x].second);
+        pii e = st.top();
+        printf("{%d, %d} ", e.first, e.second);
         st.pop();
-        if (x == e) {
+        if (e.first == u && e.second == v) {
             printf("\n");
             return;
         }
@@ -48,38 +49,31 @@ void tarj(int u, int prev) {
     cnt++;
     int children = 0;
     
-    for (int e : adj[u]) {
-        
-        if (!visE[e]) {
-            
-            visE[e] = true;
-            st.push(e);
-            int v = edges[e].first == u ? edges[e].second : edges[e].first;
-            
-            if (!vis[v]) {
-                children++;
-                tarj(v, u);
-                low[u] = min(low[u], low[v]);
-                if ((prev == -1 && children > 1) || (prev != -1 && low[v] >= dfn[u])) {
-                    art[u] = true;
-                    findbcc(e);
-                }
-                if (low[v] > dfn[u]) {
-                    bridge[e] = true;
-                }
-            } else if (v != prev) {
-                low[u] = min(low[u], dfn[v]);
+    for (int v : adj[u]) {
+        if (!vis[v]) {
+            children++;
+            st.push({u, v});
+            tarj(v, u);
+            low[u] = min(low[u], low[v]);
+            if ((prev == -1 && children > 1) || (prev != -1 && low[v] >= dfn[u])) {
+                art[u] = true;
+                findbcc(u, v);
             }
-            
+            if (low[v] > dfn[u]) {
+                bridges[bridgeCnt] = {u, v};
+                bridgeCnt++;
+            }
+        } else if (v != prev && dfn[v] < low[u]) {
+            low[u] = dfn[v];
+            st.push({u, v});
         }
     }
-    
 }
 
 void findscc(int u) {
-    while (!st.empty()) {
-        int v = st.top();
-        st.pop();
+    while (!st1.empty()) {
+        int v = st1.top();
+        st1.pop();
         dfn[v] = INF;
         printf("%d ", v);
         if (v == u) {
@@ -94,7 +88,7 @@ void tarjscc(int u) {
     dfn[u] = low[u] = cnt;
     vis[u] = true;
     cnt++;
-    st.push(u);
+    st1.push(u);
     
     for (int v : adj[u]) {
         if (!vis[v]) {
@@ -121,16 +115,15 @@ int main() {
         int a, b;
         for (int i = 1; i <= M; i++) {
             scanf("%d%d", &a, &b);
-            adj[a].push_back(i);
-            adj[b].push_back(i);
-            edges[i] = {a, b};
+            adj[a].push_back(b);
+            adj[b].push_back(a);
         }
         
         printf("Biconnected components:\n");
         for (int i = 1; i <= N; i++) {
             if (!vis[i]) {
                 tarj(i, -1);
-                findbcc(-1);
+                findbcc(-1, -1);
             }
         }
         printf("\n\n");
@@ -143,10 +136,8 @@ int main() {
         }
         printf("\n\n");
         printf("Bridges: ");
-        for (int i = 1; i <= M; i++) {
-            if (bridge[i]) {
-                printf("{%d, %d} ", edges[i].first, edges[i].second);
-            }
+        for (int i = 0; i < bridgeCnt; i++) {
+            printf("{%d, %d} ", bridges[i].first, bridges[i].second);
         }
         printf("\n\n");
         
