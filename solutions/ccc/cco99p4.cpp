@@ -1,5 +1,5 @@
 /*
- Solution to CCC '99 P4 - Maple Roundup by Ava Pun
+ Solution to CCC '99 P4 - Maple Syrup Roundup by Ava Pun
  Key concepts: geometry, convex hull
  */
 
