@@ -1,5 +1,5 @@
 /*
- Solution to CCO '00 P4 - Routing by Ava Pun
+ Solution to CCO '00 P4 - Packet Routing by Ava Pun
  Key concepts: graph theory, Floyd-Warshall's
  */
  
