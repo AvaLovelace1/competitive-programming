@@ -28,28 +28,22 @@ int bf(int start, int end) {
     fill(dist, dist + N + 1, INF);
     dist[start] = 0;
     
-    for (int i = 1; i <= N - 1; i++) {
+    for (int i = 1; i <= N; i++) {
         for (int u = 1; u <= N; u++) {
             for (pii e : adj[u]) {
                 int v = e.first;
                 int w = e.second;
-                if (dist[u] + w < dist[v]) {
-                    dist[v] = dist[u] + w;
+                if (dist[u] != INF && dist[u] + w < dist[v]) {
+                    if (i == N) {
+                        return -1;
+                    } else {
+                        dist[v] = dist[u] + w;
+                    }
                 }
             }
         }
     }
-
-    for (int u = 1; u <= N; u++) {
-        for (pii e : adj[u]) {
-            int v = e.first;
-            int w = e.second;
-            if (dist[u] + w < dist[v]) {
-                return -1;
-            }
-        }
-    }
-
+    
     return dist[end];
 }
 
