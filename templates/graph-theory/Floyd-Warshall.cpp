@@ -29,7 +29,9 @@ bool fw() {
     for (int k = 1; k <= N; k++) {
         for (int u = 1; u <= N; u++) {
             for (int v = 1; v <= N; v++) {
-                dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
+                if (dist[u][k] != INF && dist[k][v] != INF) {
+                    dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
+                }
             }
         }
     }
@@ -53,7 +55,7 @@ int main() {
     for (int i = 1; i <= N; i++) {
         dist[i][i] = 0;
     }
-
+    
     int a, b, d;
     while (M--) {
         scanf("%d%d%d", &a, &b, &d);
