@@ -130,7 +130,7 @@ int main() {
     while (bfs()) {
         ans += dfs(S, INF);
     }
-    cout << ans;
+    cout << ans << "\n";
     
     return 0;
     
