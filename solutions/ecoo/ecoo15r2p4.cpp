@@ -1,6 +1,6 @@
 /*
  Solution to ECOO '15 R2 P4 - Rectangle Roundup by Ava Pun
- Key concepts: implementation
+ Key concepts: brute force, implementation
  */
 
 #include <bits/stdc++.h>
