@@ -67,7 +67,7 @@ int main() {
         }
     }
     
-    printf("%ld\n", ss.size());
+    cout << ss.size() << "\n";
     
     return 0;
 }
