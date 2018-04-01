@@ -1,5 +1,5 @@
 /*
- Solution to CCO '13 P2 - Tourney -  by Ava Pun
+ Solution to CCO '13 P2 - Tourney by Ava Pun
  Key concepts: segment tree
  */
  
