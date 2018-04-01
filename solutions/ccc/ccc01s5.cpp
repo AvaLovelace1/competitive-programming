@@ -7,7 +7,6 @@
 
 using namespace std;
 
-
 int M, N;
 string arrA[45], arrB[45];
 unordered_set<string> vis;
