@@ -24,7 +24,7 @@ const int MAX = 1e5 + 5;
 int Q, Y;
 ll Z;
 
-bool func(double x) {
+bool check(double x) {
     double ans = x;
     for (int i = 2; i <= Y; i++) {
         ans = pow(x, ans);
@@ -44,9 +44,9 @@ int main() {
         scanf("%d%lld", &Y, &Z);
         
         int start = 0, end = 10e6, mid;
-        for (int i = 0; i < 25; i++) {
+        while (start < end) {
             mid = (start + end) / 2;
-            if (!func(mid / 1e6)) {
+            if (!check(mid / 1e6)) {
                 end = mid;
             } else {
                 start = mid + 1;
