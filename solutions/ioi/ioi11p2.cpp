@@ -140,8 +140,6 @@ int best_path(int N, int K, int H[][2], int L[]) {
     return ans == INF ? -1 : ans;
 }
 
-/*
-
 int N, K;
 int H[MAX][2], L[MAX];
 
@@ -183,5 +181,3 @@ int main() {
     
     return 0;
 }
-
-*/
