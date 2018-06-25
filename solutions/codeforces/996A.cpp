@@ -1,6 +1,6 @@
 /*
  Solution to Hit the Lottery by Ava Pun
- Key concepts: implementation
+ Key concepts: implementation, greedy algorithms
  */
 
 #include <bits/stdc++.h>
