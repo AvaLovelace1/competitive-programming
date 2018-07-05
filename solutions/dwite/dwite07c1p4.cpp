@@ -45,7 +45,7 @@ int main() {
     memset(dp, -1, sizeof(dp));
     int ans = solve(H, S - 1);
     
-    printf("%d", ans != INF ? ans : 0);
+    printf("%d\n", ans != INF ? ans : 0);
     
     return 0;
     
