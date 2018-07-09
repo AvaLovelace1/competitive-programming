@@ -82,7 +82,7 @@ int main() {
         }
     }
     
-    printf("%d\n", min(dp[0][0][0], dp[0][0][1]));
+    cout << min(dp[0][0][0], dp[0][0][1]) << '\n';
     
     return 0;
 }
