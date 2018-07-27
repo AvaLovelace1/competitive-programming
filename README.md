@@ -1,7 +1,7 @@
 # competitive-programming
 A collection of templates and solutions for competitive programming.
 
-Codeforces: [AvaLovelace](http://codeforces.com/profile/AvaLovelace)
+Codeforces: [AvaLovelace](http://codeforces.com/profile/AvaLovelace)  
 DMOJ: [AvaLovelace](https://dmoj.ca/user/AvaLovelace)  
 PEG: [AvaLovelace](https://wcipeg.com/user/AvaLovelace)
 
