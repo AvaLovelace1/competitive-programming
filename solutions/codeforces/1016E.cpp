@@ -1,6 +1,6 @@
 /*
  Solution to Rest In The Shades by Ava Pun
- Key concepts: geometry, binary search
+ Key concepts: geometry, binary search, prefix sum array
  */
 
 #include <bits/stdc++.h>
