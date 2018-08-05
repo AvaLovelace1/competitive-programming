@@ -1,5 +1,5 @@
 /*
- Solution to Mock CCO '18 Contest 1 Problem 1 - A Geometry Problem by Ava Pun
+ Solution to BOI 2007 P1 - Escape by Ava Pun
  Key concepts: graph theory, max flow, Dinic's
  */
 
