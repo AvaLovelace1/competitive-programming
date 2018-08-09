@@ -40,8 +40,7 @@ inline double angle(pii p1, pii p2, pii p3){
     ll x1 = p1.f - p2.f, y1 = p1.s - p2.s;
     ll x2 = p3.f - p2.f, y2 = p3.s - p2.s;
     ll dot = x1 * x2 + y1 * y2, det = x1 * y2 - y1 * x2;
-    double d1 = dist(p1, p2), d2 = dist(p2, p3);
-    return atan2(det, dot) * (d1 / d2);
+    return atan2(det, dot);
 }
 
 inline void popStack(stack<pii> &st, vii &hull) {
