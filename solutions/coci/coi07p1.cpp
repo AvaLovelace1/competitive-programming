@@ -1,5 +1,5 @@
 /*
- Solution to  by Ava Pun
+ Solution to COI '07 #1 Glasnici by Ava Pun
  Key concepts: binary search, greedy algorithms
  */
 
