@@ -1,6 +1,6 @@
 /*
  Solution to Google Code Jam '19 QR P2 - You Can Go Your Own Way by Ava Pun
- Key concepts: ad hoc
+ Key concepts: implementation
  */
 
 #include <bits/stdc++.h>
