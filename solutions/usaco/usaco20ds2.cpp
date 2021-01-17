@@ -2,6 +2,7 @@
  * Solution to USACO '20 December S2 - Rectangular Pasture by Ava Pun
  * Key concepts: 2D prefix sum array
  */
+
 #include <bits/stdc++.h>
 
 using namespace std;
