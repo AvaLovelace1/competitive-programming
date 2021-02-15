@@ -2,12 +2,9 @@ template<class T, int MAX> struct PSA {
     int N;
     T arr[MAX + 2];
 
-    PSA(int N): N{N} {
-        fill(arr, arr + N + 2, 0);
-    }
+    PSA(int N): N{N}, arr{} {}
 
-    PSA(int N, T a[]): N{N} {
-        arr[0] = arr[N + 1] = 0;
+    PSA(int N, T a[]): N{N}, arr{} {
         for (int i = 1; i <= N; ++i) {
             arr[i] = a[i];
         }
