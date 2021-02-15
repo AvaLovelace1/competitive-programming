@@ -5,7 +5,7 @@ template<typename T, int MAX> struct Fenwick {
     Fenwick(int N): N{N}, arr{}, tree{} {}
 
     Fenwick(int N, T a[]): N{N}, arr{}, tree{} {
-        for (int i = 1; i <= N; i++) {
+        for (int i = 1; i <= N; ++i) {
             upd(i, a[i]);
         }
     }
