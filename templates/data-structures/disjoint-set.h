@@ -1,8 +1,8 @@
-template<int MAX> struct UnionFind {
+template<int MAX> struct DSU {
     int N;
     int par[MAX], rnk[MAX];
 
-    UnionFind(int N): N{N}, par{}, rnk{} {
+    DSU(int N): N{N}, par{}, rnk{} {
         for (int i = 1; i <= N; ++i) {
             par[i] = i;
         }
@@ -20,12 +20,9 @@ template<int MAX> struct UnionFind {
     bool join(int a, int b) {
         a = findSet(a), b = findSet(b);
         if (a == b) return 0;
-        if (rnk[a] < rnk[b]) {
-            par[a] = b;
-        } else {
-            par[b] = a;
-            if (rnk[a] == rnk[b]) ++rnk[a];
-        }
+        if (rnk[a] < rnk[b]) swap(a, b);
+        par[b] = a;
+        if (rnk[a] == rnk[b]) ++rnk[a];
         return 1;
     }
 };
