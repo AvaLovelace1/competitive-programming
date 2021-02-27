@@ -7,6 +7,7 @@ using namespace std;
 #define pb push_back
 #define FILL(a, b) memset(a, b, sizeof(a))
 #define REP(i, a, b) for (int i = a; i <= (b); ++i)
+#define REV(i, a, b) for (int i = a; i >= (b); --i)
 #define TRAV(a, x) for (auto &a : x)
 #define ALL(x) x.begin(), x.end()
 #define SZ(x) (int) (x).size()
