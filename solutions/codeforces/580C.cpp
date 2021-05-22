@@ -1,3 +1,8 @@
+/*
+ * Solution to Kefa and Park by Ava Pun
+ * Key concepts: dynamic programming on trees
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -21,10 +26,22 @@ const int INF = 0x3F3F3F3F;
 const ll INFL = 0x3F3F3F3F3F3F3F3FLL;
 const int MOD = 1e9 + 7;
 const double EPS = 1e-9;
-const int MAX = 2e5 + 5;
+const int MAX = 1e5 + 5;
 
-int N;
-int arr[MAX];
+int N, M;
+bool arr[MAX];
+vi adj[MAX];
+int ans[MAX];
+int tot = 0;
+
+void solve(int u, int p, int m) {
+    ans[u] = max(ans[p], m + arr[u]);
+    if (adj[u].size() == 1 && adj[u][0] == p) tot += ans[u] <= M;
+
+    TRAV(v, adj[u]) {
+        if (v != p) solve(v, u, arr[u] ? m + 1 : 0);
+    }
+}
 
 int main() {
 
@@ -32,9 +49,15 @@ int main() {
     cin.tie(0);
     cin.exceptions(cin.failbit);
 
-    cin >> N;
-    REP(i, 1, N) {
-        cin >> arr[i];
+    cin >> N >> M;
+    REP(i, 1, N) cin >> arr[i];
+    REP(i, 1, N - 1) {
+        int u, v;
+        cin >> u >> v;
+        adj[u].pb(v), adj[v].pb(u);
     }
+
+    solve(1, 0, 0);
+    cout << tot << '\n';
 
 }

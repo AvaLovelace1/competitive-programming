@@ -1,3 +1,8 @@
+/*
+ * Solution to Kana and Dragon Quest game by Ava Pun
+ * Key concepts: greedy algorithms, implementation
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -21,10 +26,23 @@ const int INF = 0x3F3F3F3F;
 const ll INFL = 0x3F3F3F3F3F3F3F3FLL;
 const int MOD = 1e9 + 7;
 const double EPS = 1e-9;
-const int MAX = 2e5 + 5;
+const int MAX = 1e5 + 5;
 
-int N;
-int arr[MAX];
+int T, X, N, M;
+
+bool solve() {
+    cin >> X >> N >> M;
+    REP(i, 1, N) {
+        int nxt = X / 2 + 10;
+        if (nxt >= X) break;
+        X = nxt;
+    }
+    REP(j, 1, M) {
+        int nxt = X - 10;
+        X = nxt;
+    }
+    return X <= 0;
+}
 
 int main() {
 
@@ -32,9 +50,9 @@ int main() {
     cin.tie(0);
     cin.exceptions(cin.failbit);
 
-    cin >> N;
-    REP(i, 1, N) {
-        cin >> arr[i];
+    cin >> T;
+    REP(i, 1, T) {
+        cout << (solve() ? "YES\n" : "NO\n");
     }
 
 }

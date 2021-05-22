@@ -1,3 +1,8 @@
+/*
+ * Solution to Teams Forming by Ava Pun
+ * Key concepts: greedy algorithms, sorting
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -21,7 +26,7 @@ const int INF = 0x3F3F3F3F;
 const ll INFL = 0x3F3F3F3F3F3F3F3FLL;
 const int MOD = 1e9 + 7;
 const double EPS = 1e-9;
-const int MAX = 2e5 + 5;
+const int MAX = 1e5 + 5;
 
 int N;
 int arr[MAX];
@@ -36,5 +41,12 @@ int main() {
     REP(i, 1, N) {
         cin >> arr[i];
     }
+    sort(arr + 1, arr + N + 1);
+
+    int ans = 0;
+    for (int i = 1; i <= N; i += 2) {
+        ans += arr[i + 1] - arr[i];
+    }
+    cout << ans << '\n';
 
 }

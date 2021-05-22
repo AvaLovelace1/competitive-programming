@@ -1,3 +1,8 @@
+/*
+ * Solution to Unique Bid Auction by Ava Pun
+ * Key concepts: implementation, sorting
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -23,8 +28,20 @@ const int MOD = 1e9 + 7;
 const double EPS = 1e-9;
 const int MAX = 2e5 + 5;
 
-int N;
-int arr[MAX];
+int T, N;
+pii arr[MAX];
+
+void solve() {
+    sort(arr + 1, arr + N + 1);
+    REP(i, 1, N) {
+        if ((i == 1 || arr[i - 1].f != arr[i].f) &&
+                (i == N || arr[i + 1].f != arr[i].f)) {
+            cout << arr[i].s << '\n';
+            return;
+        }
+    }
+    cout << "-1\n";
+}
 
 int main() {
 
@@ -32,9 +49,14 @@ int main() {
     cin.tie(0);
     cin.exceptions(cin.failbit);
 
-    cin >> N;
-    REP(i, 1, N) {
-        cin >> arr[i];
+    cin >> T;
+    REP(i, 1, T) {
+        cin >> N;
+        REP(i, 1, N) {
+            cin >> arr[i].f;
+            arr[i].s = i;
+        }
+        solve();
     }
 
 }

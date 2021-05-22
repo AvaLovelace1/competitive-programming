@@ -1,3 +1,8 @@
+/*
+ * Solution to Pashmak and Garden by Ava Pun
+ * Key concepts: implementation
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -21,10 +26,10 @@ const int INF = 0x3F3F3F3F;
 const ll INFL = 0x3F3F3F3F3F3F3F3FLL;
 const int MOD = 1e9 + 7;
 const double EPS = 1e-9;
-const int MAX = 2e5 + 5;
+const int MAX = 1e5 + 5;
 
-int N;
-int arr[MAX];
+int X1, Y1, X2, Y2;
+int X3, Y3, X4, Y4;
 
 int main() {
 
@@ -32,9 +37,27 @@ int main() {
     cin.tie(0);
     cin.exceptions(cin.failbit);
 
-    cin >> N;
-    REP(i, 1, N) {
-        cin >> arr[i];
+    cin >> X1 >> Y1 >> X2 >> Y2;
+    if (X1 == X2) {
+        int len = abs(Y1 - Y2);
+        X3 = X4 = X1 + len;
+        Y3 = Y1;
+        Y4 = Y2;
+    } else if (Y1 == Y2) {
+        int len = abs(X1 - X2);
+        Y3 = Y4 = Y1 + len;
+        X3 = X1;
+        X4 = X2;
+    } else if (abs(X1 - X2) != abs(Y1 - Y2)) {
+        cout << "-1\n";
+        return 0;
+    } else {
+        X3 = X1;
+        Y3 = Y2;
+        X4 = X2;
+        Y4 = Y1;
     }
+
+    cout << X3 << ' ' << Y3 << ' ' << X4 << ' ' << Y4 << '\n';
 
 }
